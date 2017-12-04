@@ -49,16 +49,7 @@
                 getName:function(pathname,array){
                     var _result = [];
                     var pageNames = {
-                        '/GatherGoods': 101,
                         '/HotGoods':    102,
-                        '/SelfSupport': 103,
-                        '/GatherStore': 104,
-                        '/MyCustom':    105,
-                        '/Ju':          106,
-                        '/BannerEntry': 107,
-                        '/ChannelEntry':108,
-                        '/Order':       109,
-                        '/SignIn':      111
                     }
                     var _pathname = pathname == '/' && array[0] ? array[0].path : pathname
                     _pathname = _pathname.indexOf('/Ju') == 0 ? '/Ju' : _pathname

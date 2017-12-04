@@ -27,13 +27,13 @@ app.use(convert(historyApiFallback({
 // }));
 //测试服务器
 app.use(proxy({
-  host: 'http://192.168.14.38',
-  match: /^\/stuff\//
+  host: 'http://101.132.141.173',
+  match: /^\/lxj_api\//
 }));
-// app.use(proxy({
-//   host: 'http://192.168.14.38/',
-//   match: /^\/custom\//
-// }));
+app.use(proxy({
+  host: 'http://192.168.14.38/',
+  match: /^\/custom\//
+}));
 // app.use(proxy({
 //   host: 'http://127.0.0.1:80',
 //   match: /^\/api\//

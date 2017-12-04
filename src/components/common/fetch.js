@@ -8,15 +8,15 @@ export function fetchPosts( url, param, type = "POST", headers = {}, repType = "
 
     //debugger;
     // param.userId = 140001239;
-    param = Object.assign(param, { device: LXJFK.Util.getDevice()==="ios" ? 1:2 });
-    if (type.toLocaleUpperCase() === "GET" && size(param) > 0 && url.indexOf("?")<0) {
-        url += "?" + toExcString(param)
-    }
+    // param = Object.assign(param, { device: LXJFK.Util.getDevice()==="ios" ? 1:2 });
+    // if (type.toLocaleUpperCase() === "GET" && size(param) > 0 && url.indexOf("?")<0) {
+    //     url += "?" + toExcString(param)
+    // }
     headers = assignIn({}, {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Methods": "PUT,POST,GET,DELETE,OPTIONS",
-        "Response-Content-Type":'application/json'
+        // 'Accept': 'application/*',
+        // 'Content-Type': 'application/*',
+        // "Access-Control-Allow-Methods": "PUT,POST,GET,DELETE,OPTIONS",
+        // "Response-Content-Type":'application/*'
     });
    // debugger;
 

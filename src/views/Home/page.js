@@ -12,7 +12,7 @@ class Home extends Component {
 
   constructor(props) {
     super(props)
-    fetchPosts("/api/user/userId",{},"GET")
+    fetchPosts("/lxj_api/navigation_list.htm",{},"GET")
       .then(data => {
         props.getLevel()
         props.getUserInfo()

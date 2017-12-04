@@ -1,5 +1,5 @@
 /**
- * Created by xiaolin on 16/12/16.
+ * Created by nani on 16/12/16.
  */
 
 require('babel-register')

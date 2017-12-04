@@ -1,5 +1,5 @@
 /**
- * Created by xiaolin on 16/12/15.
+ * Created by nani on 16/12/15.
  */
 import webpack from 'webpack'
 import cssnano from 'cssnano'

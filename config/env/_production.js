@@ -1,5 +1,5 @@
 /**
- * Created by xiaolin on 16/12/19.
+ * Created by nani on 16/12/19.
  */
 export default config => ({
     compiler_fail_on_warning : false,

@@ -1,5 +1,5 @@
 /**
- * Created by xiaolin on 16/12/15.
+ * Created by nani on 16/12/15.
  */
 import WebpackHotMiddleware from 'webpack-hot-middleware'
 import applyExpressMiddleware from '../lib/apply-express-middleware'
@@ -17,4 +17,3 @@ export default (compiler, opts) => {
         }
     }
 }
-

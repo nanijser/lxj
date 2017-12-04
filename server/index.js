@@ -31,8 +31,8 @@ app.use(proxy({
   match: /^\/lxj_api\//
 }));
 app.use(proxy({
-  host: 'http://192.168.14.38/',
-  match: /^\/custom\//
+  host: 'http://101.132.141.173',
+  match: /^\/h5\//
 }));
 // app.use(proxy({
 //   host: 'http://127.0.0.1:80',

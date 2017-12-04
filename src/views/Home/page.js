@@ -47,8 +47,6 @@ class Home extends Component {
 
   componentDidUpdate() {
     if( !!this.props.userInfo.level && !this.state.isGaugeRendered) {
-      this.renderGauge(this.levelOption[this.props.userInfo.level.toUpperCase()])
-      // this.renderGauge(this.levelOption[this.props.userInfo.level]);
       this.setState({
         isGaugeRendered: true
       });
@@ -115,74 +113,6 @@ class Home extends Component {
       </div>
     )
   }
-
-
-
-  renderGauge(displayValue) {
-  	var angle = 0.14, innerAngle = angle;
-  	var displayAngle = getAngle(displayValue), innerDisplayAngle = displayAngle;
-  	var radius = 100, innerRadius = radius - 8, iconRadius = radius - 16;
-  	var canvas = document.getElementById("dash");
-  	var ctx = canvas.getContext("2d");
-  	var w = 240 / 2;
-    var h = 210 / 2;
-
-  	ctx.strokeStyle = "rgba(173, 141, 114, 0.3)";
-    ctx.beginPath();
-    ctx.arc(w, h, radius, (1 - angle) * Math.PI, (2 + angle) * Math.PI, false);
-    ctx.lineWidth = 1;
-    ctx.lineCap = "round";
-    ctx.stroke();
-
-  	ctx.beginPath();
-  	ctx.arc(w, h, innerRadius, (1 - angle) * Math.PI, (2 + angle) * Math.PI, false);
-    ctx.setLineDash([1,4])
-    ctx.stroke();
-    ctx.restore();
-
-  	ctx.strokeStyle = "#ae8e72";
-    ctx.beginPath();
-  	ctx.setLineDash([]);
-    ctx.arc(w, h, radius, (1 - angle) * Math.PI, displayAngle, false);
-    ctx.stroke();
-
-  	ctx.beginPath();
-  	ctx.setLineDash([1,3]);
-    ctx.arc(w, h, innerRadius, (1 - innerAngle) * Math.PI, innerDisplayAngle, false);
-    ctx.stroke();
-
-  	ctx.strokeStyle = "#F6E284";
-    ctx.beginPath();
-  	ctx.lineWidth = 4;
-  	ctx.setLineDash([2,1000]);
-    ctx.arc(w, h, radius,  displayAngle,(2 + angle) * Math.PI, false);
-  	ctx.shadowColor = '#fff';
-  	ctx.shadowOffsetX = ctx.shadowOffsetY = 0;
-  	ctx.shadowBlur = 5;
-    ctx.stroke();
-
-  	var startX, startY, x, y, length = 88;
-  	var img = document.createElement("img");
-  	img.src = require("static/imgs/home/pointer.png");
-  	img.addEventListener("load",function(){
-  		startX = Math.round(w + 5 * Math.cos(displayAngle - Math.PI / 2))
-  		startY = Math.round(h + 7.25 * Math.sin(displayAngle - Math.PI / 2));
-  			ctx.save();
-  			ctx.shadowBlur = 0;
-  			ctx.translate(startX,startY);
-  			ctx.rotate(displayAngle + Math.PI / 2);
-  			ctx.drawImage(img, 0, -length, 10, 14.5);
-  			ctx.restore();
-        canvas.style.zIndex="2";
-    },false);
-
-  	function getAngle(value) {
-  		var min=2.72,max=6.65;
-  		return (max - min) / 100 * value + min;
-  	}
-  }
-
-
 };
 
 function mapStateToProps(state) {

@@ -1,5 +1,5 @@
-# QBGoods
-QBGoods frontEnd Project
+# LXJ
+LXJ frontEnd Project
 
 # install
 npm install

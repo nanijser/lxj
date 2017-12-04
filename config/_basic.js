@@ -21,7 +21,7 @@ const config = {
     // Server Configuration
     // ----------------------------------
     server_host: (process.env.NODE_ENV == 'development') ? '127.0.0.1':'mqbii.qbcdn.com',
-    server_port: (process.env.NODE_ENV == 'development') ? process.env.PORT || 8081 :'',
+    server_port: (process.env.NODE_ENV == 'development') ? process.env.PORT || 8088 :'',
 
     // ----------------------------------
     // Compiler Configuration
